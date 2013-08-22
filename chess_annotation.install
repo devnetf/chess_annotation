@@ -1,0 +1,12 @@
+<?php
+    // hook_uninstall() implementation
+    function chess_annotation_uninstall(){
+        node_type_delete('chess_annotation');
+    }
+	
+	function chess_annotation_install() {
+  // Ensure the node type is available.
+  node_types_rebuild();
+  $types = node_type_get_types();
+  node_add_body_field($types['chess_annotation'], 'Body for Displaying your Chess Game');
+}

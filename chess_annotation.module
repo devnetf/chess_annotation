@@ -1,0 +1,168 @@
+<?php
+
+/*
+  Document   : chess_annotation.module
+  Created on : 15-Jun-2013, 12:32:52 PM
+  Author     : Shao Hang He
+  Description: core file
+ */
+
+/**
+ * Implements hook_init().
+ *
+ * We will add the JavaScript and CSS here instead in the form alter because we wanna it to be global
+ */
+function chess_annotation_init() {
+
+  $path = drupal_get_path('module', 'chess_annotation');
+  drupal_add_css("$path/chess_annotation.css");
+  drupal_add_css("$path/chess.css");
+  drupal_add_css("$path/board-min.css");
+  drupal_add_js("$path/pgnyui.js");
+  drupal_add_js("$path/pgnviewer.js");
+  drupal_add_js("$path/chess_annotation.js");
+}
+
+/**
+ * hook_menu() implementation
+ */
+function chess_annotation_menu() {
+  $items = array();
+
+  $items['chess_annotation/processPGN'] = array(
+    'page callback' => 'chess_annotation_processPGN',
+    'access callback' => 'user_access',
+    'access arguments' => array('access content'),
+    'type' => MENU_CALLBACK,
+  );
+  return $items;
+}
+
+//AJAX callback processPGN
+function chess_annotation_processPGN() {
+  echo 'yo';
+}
+
+// hook_form_alter implementation
+/* function chess_annotation_form_alter(&$form, $form_state, $form_id) {
+  $path = drupal_get_path('module', 'chess_annotation');
+  drupal_add_css("$path/chess_annotation.css");
+  drupal_add_css("$path/chess.css");
+  drupal_add_js("$path/jchess-0.1.0.js");
+  drupal_add_js("$path/chess_annotation.js");
+
+  } */
+// hook_form implementation
+function chess_annotation_form($node, &$form_state) {
+  $form = array();
+
+  $path = drupal_get_path('module', 'chess_annotation');
+
+  $prefixTemplate = $path . "/pgn_template.html";
+
+  //load templates
+  $form['#suffix'] = '<div id = "chess_annotation_template" style = "display:none;" >' . file_get_contents($prefixTemplate) . '</div>';
+
+  $form['title'] = array(
+    '#type' => 'textfield',
+    '#title' => "Title",
+    '#required' => TRUE,
+    '#default_value' => t("Chess Game"),
+    '#weight' => -5,
+  );
+  
+  $form['chess_annotation_pieceSet'] = array(
+    '#type' => 'select',
+    '#title' => t( 'Select Piece Style'),
+    '#attributes' => array(
+      'id' => 'select-chess_annotation_pieceSet'
+    ),
+    '#options' => array(
+      'merida' => 'merida',
+      'leipzig' => 'leipzig',
+      'condal' => 'condal',
+      'case' => 'case',
+      'kingdom' => 'kingdom',
+      'maya' => 'maya',
+    ),
+    '#default_value' => 'merida',
+    '#description' => t('Set the Piece Set of your board. It default to Merida'),
+  );
+  
+   $form['chess_annotation_pieceSize'] = array(
+    '#type' => 'select',
+    '#title' => t('Select Piece Size'),
+    '#attributes' => array(
+      'id' => 'select-chess_annotation_pieceSize'
+    ),
+    '#options' => array(
+      46 => t('46 Pixels'),
+      40 => t('40 Pixels'),
+      35 => t('35 Pixels'),
+      29 => t('29 Pixels'),
+      24 => t('24 Pixels'),
+      20 => t('20 Pixels'),
+    ),
+    '#default_value' => 46,
+    '#description' => t('Set the size of the pieces of your board. It default to 46 pixels'),
+  );
+
+  $form['chess_annotation_pastePGN'] = array(
+    '#type' => 'textarea',
+    '#title' => t('Paste the Chess Game in PGN format'),
+    '#attributes' => array(
+      'id' => 'edit-chess-annotation-pastepgn'
+    ),
+    '#description' => t('Paste One or More Chess Game(s) in PGN format in this textarea'),
+    '#rows' => 7,
+    '#required' => FALSE,
+  );
+  /* TO DO: implemented parse PGN through files
+    $form['chess_annotation_uploadPGN'] = array(
+    '#type' => 'file',
+    '#description' => 'Upload Your PGN File Here!',
+    '#title' => 'PGN File',
+    );
+   */
+
+  $form['chess_annotation_parsePGN'] = array(
+    '#type' => 'button',
+    '#attributes' => array(
+      'id' => 'edit-chess-annotation-parsepgn',
+      'value' => "Parse PGN"
+    ),
+    '#title' => 'Parse PGN',
+  );
+  $form['chess_annotation_pgnview'] = array(
+    '#type' => 'textarea',
+    '#title' => t('HTML Preview'),
+    '#attributes' => array(
+      'id' => 'edit-chess-annotation-pgnview'
+    ),
+    '#description' => t('This is the HTML preview of the board content, copy past it into the body.'),
+    '#rows' => 15,
+    '#required' => FALSE,
+  );
+
+  return $form;
+}
+
+// hook_node_info() implementation
+function chess_annotation_node_info() {
+  return array(
+    'chess_annotation' => array(
+      'name' => t('Chess Annotation'),
+      'base' => 'chess_annotation',
+      'module' => 'chess_annotation',
+      'description' => t("This nodetype will generate a chess game annotation page based on a PGN File"),
+      'help' => 'You are creating a page that will display a single chess game.',
+      'title_label' => t('Chess Annotation'),
+      'has_body' => TRUE,
+    ),
+  );
+}
+
+// hook_validate() implementation
+function chess_annotation_validate() {
+  
+}

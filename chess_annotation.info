@@ -1,0 +1,5 @@
+name = Chess Annotation
+description = Custom Content Type to generate an annotated chess game page based on a PGN file. 
+core = 7.x
+files[] = chess_annotation.module;
+files[] = chess_annotation.install;
