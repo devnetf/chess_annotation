@@ -14,7 +14,7 @@ jQuery(document).ready(function()
   
     if (jQuery('#curr_game').html().length > 10)
     {
-       chess = new PgnViewer(
+       chess = new PgnViewer( 
                 {
                     boardName: "game",
                     //pgnFile: 'upper.pgn',  
