@@ -42,11 +42,6 @@ function chess_annotation_menu() {
   return $items;
 }
 
-//AJAX callback processPGN
-function chess_annotation_processPGN() {
-  echo 'yo';
-}
-
 // hook_form_alter implementation
 /* function chess_annotation_form_alter(&$form, $form_state, $form_id) {
   $path = drupal_get_path('module', 'chess_annotation');
