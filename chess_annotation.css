@@ -3,26 +3,25 @@
     Created on : 15-Jun-2013, 12:32:52 PM
     Author     : Shao Hang He
     Description:
-        Purpose of the stylesheet follows.
-    last time test commit see if works
+    Main stylesheet for the module
 */
 
-#chess_content
+.chess_content
 {
     position: relative;   
     width: 950px;
-    height: 550px;
+    height: 600px;
 }
 
 
 
-#chessgame {
+.chessgame {
     position:relative;
-     width: 900px;
+    width: 900px;
     height: 700px;
 }
 
-#chessgame_header{
+.chessgame_header{
     position:absolute;
     left:0px;
     top: 0px;
@@ -47,7 +46,7 @@
     top: 0px;
     width: 400px;
     height: 500px;
-	padding: 15px;
+    padding: 15px;
     word-wrap: break-word;   
     overflow: auto;
 }
@@ -61,50 +60,33 @@
     float: left;
 }
 
-#chessgame .controls
-{
-    position:absolute;
-    right:0px;
-    top: 0px;
-    width:200px;
-    float: right;
-}
-
-#chessgame .annot
-{
-    position:absolute;
-    left:300px;
-    top: 300px;
-    width:300px;
-    max-height: 300px;   
-}
 .ct-start
 {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
 }
 .ct-forward
 {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
 }
 .ct-back
 {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
 }
 .ct-end
 {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
 }
 .ct-play
 {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
 }
 .ct-stop
 {
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
 }

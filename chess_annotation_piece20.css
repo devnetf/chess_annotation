@@ -1,0 +1,59 @@
+/* 
+    Document   : chess_annotation_piece20.css
+    Created on : 15-Jun-2013, 12:32:52 PM
+    Author     : Shao Hang He
+    Description:
+      This is the transformed style for the piece set of size 20
+*/
+
+.chess_content20
+{
+    position: relative;     
+    width: 500px;
+    height: 400px;
+    margin: auto;
+}
+
+
+
+.chessgame20 {
+    position:relative;
+    width: 450px;
+    height: 300px;
+}
+
+.chessgame_header20{
+    position:absolute;
+    left:0px;
+    top: 0px;
+    margin-left:auto;
+    margin-right:auto;
+    padding: 5px;
+    width:200px;
+    height: 100px;
+    word-wrap: break-word;   
+    overflow: auto;
+    font-size: 0.8em;
+}
+
+.movelist20 {
+    position:absolute;
+    left:200px;
+    top: 0px;
+    width: 200px;
+    height: 370px;
+    padding: 15px;
+    word-wrap: break-word;   
+    overflow: auto;
+    font-size: 0.8em;
+}
+
+ .board20 {
+    position:absolute;
+    left:0px;
+    top: 100px;
+     width:200px;
+    height: 200px;
+    float: left;
+}
+

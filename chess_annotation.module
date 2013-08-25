@@ -16,7 +16,11 @@ function chess_annotation_init() {
 
   $path = drupal_get_path('module', 'chess_annotation');
   drupal_add_css("$path/chess_annotation.css");
-  drupal_add_css("$path/chess.css");
+  drupal_add_css("$path/chess_annotation_piece20.css");
+  drupal_add_css("$path/chess_annotation_piece24.css");
+  drupal_add_css("$path/chess_annotation_piece29.css");
+  drupal_add_css("$path/chess_annotation_piece35.css");
+  drupal_add_css("$path/chess_annotation_piece40.css");
   drupal_add_css("$path/board-min.css");
   drupal_add_js("$path/pgnyui.js");
   drupal_add_js("$path/pgnviewer.js");

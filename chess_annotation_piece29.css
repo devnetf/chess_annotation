@@ -1,0 +1,59 @@
+/* 
+    Document   : chess_annotation_piece29.css
+    Created on : 15-Jun-2013, 12:32:52 PM
+    Author     : Shao Hang He
+    Description:
+     This is the transformed style for the piece set of size 29
+*/
+
+.chess_content29
+{
+    position: relative;     
+    width: 650px;
+    height: 450px;
+    margin: auto;
+}
+
+
+
+.chessgame29 {
+    position:relative;
+    width: 450px;
+    height: 300px;
+}
+
+.chessgame_header29{
+    position:absolute;
+    left:0px;
+    top: 0px;
+    margin-left:auto;
+    margin-right:auto;
+    padding: 5px;
+    width:250px;
+    height: 100px;
+    word-wrap: break-word;   
+    overflow: auto;
+    font-size: 0.8em;
+}
+
+.movelist29 {
+    position:absolute;
+    left:270px;
+    top: 0px;
+    width: 200px;
+    height: 440px;
+    padding: 10px;
+    word-wrap: break-word;   
+    overflow: auto;
+    font-size: 0.8em;
+}
+
+.board29 {
+    position:absolute;
+    left:0px;
+    top: 100px;
+     width:200px;
+    height: 200px;
+    float: left;
+}
+

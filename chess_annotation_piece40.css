@@ -1,0 +1,57 @@
+/* 
+    Document   : chess_annotation_piece40.css
+    Created on : 15-Jun-2013, 12:32:52 PM
+    Author     : Shao Hang He
+    Description:
+       This is the transformed style for the piece set of size 40
+*/
+
+.chess_content40
+{
+    position: relative;     
+    width: 800px;
+    height: 550px;
+    margin: auto;
+}
+
+.chessgame40 {
+    position:relative;
+    width: 450px;
+    height: 300px;
+}
+
+.chessgame_header40{
+    position:absolute;
+    left:0px;
+    top: 0px;
+    margin-left:auto;
+    margin-right:auto;
+    padding: 5px;
+    width:330px;
+    height: 100px;
+    word-wrap: break-word;   
+    overflow: auto;
+    font-size: 0.9em;
+}
+
+.movelist40 {
+    position:absolute;
+    left:370px;
+    top: 0px;
+    width: 300px;
+    height: 500px;
+    padding: 10px;
+    word-wrap: break-word;   
+    overflow: auto;
+    font-size: 0.9em;
+}
+
+.board40 {
+    position:absolute;
+    left:0px;
+    top: 100px;
+     width:200px;
+    height: 200px;
+    float: left;
+}
+

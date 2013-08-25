@@ -1,0 +1,56 @@
+/* 
+    Document   : chess_annotation_piece35.css
+    Created on : 15-Jun-2013, 12:32:52 PM
+    Author     : Shao Hang He
+    Description:
+       This is the transformed style for the piece set of size 35
+*/
+
+.chess_content35
+{
+    position: relative;     
+    width: 700px;
+    height: 500px;
+    margin: auto;
+}
+
+.chessgame35 {
+    position:relative;
+    width: 450px;
+    height: 300px;
+}
+
+.chessgame_header35{
+    position:absolute;
+    left:0px;
+    top: 0px;
+    margin-left:auto;
+    margin-right:auto;
+    padding: 5px;
+    width:280px;
+    height: 100px;
+    word-wrap: break-word;   
+    overflow: auto;
+    font-size: 0.9em;
+}
+
+.movelist35 {
+    position:absolute;
+    left:320px;
+    top: 0px;
+    width: 250px;
+    height: 470px;
+    padding: 10px;
+    word-wrap: break-word;   
+    overflow: auto;
+    font-size: 0.9em;
+}
+
+.board35 {
+    position:absolute;
+    left:0px;
+    top: 100px;
+     width:200px;
+    height: 200px;
+    float: left;
+}

@@ -1,0 +1,59 @@
+/* 
+    Document   : chess_annotation_piece24.css
+    Created on : 15-Jun-2013, 12:32:52 PM
+    Author     : Shao Hang He
+    Description:
+       This is the transformed style for the piece set of size 24
+*/
+
+.chess_content24
+{
+    position: relative;     
+    width: 500px;
+    height: 420px;
+    margin: auto;
+}
+
+
+
+.chessgame24 {
+    position:relative;
+    width: 450px;
+    height: 300px;
+}
+
+.chessgame_header24{
+    position:absolute;
+    left:0px;
+    top: 0px;
+    margin-left:auto;
+    margin-right:auto;
+    padding: 5px;
+    width:200px;
+    height: 100px;
+    word-wrap: break-word;   
+    overflow: auto;
+    font-size: 0.8em;
+}
+
+ .movelist24 {
+    position:absolute;
+    left:220px;
+    top: 0px;
+    width: 200px;
+    height: 400px;
+    padding: 10px;
+    word-wrap: break-word;   
+    overflow: auto;
+    font-size: 0.8em;
+}
+
+.board24 {
+    position:absolute;
+    left:0px;
+    top: 100px;
+    width:200px;
+    height: 200px;
+    float: left;
+}
+
